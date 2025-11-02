@@ -19,7 +19,8 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Show environment variable
-        run: echo "MYVAR = ${{ env.MYVAR }}"
+        run: python -c "import os; print('MYVAR =', os.getenv('MYVAR'))"
+
 
       - name: Setup Python
         uses: actions/setup-python@v5
